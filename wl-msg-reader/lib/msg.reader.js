@@ -387,7 +387,12 @@
     var fieldName = CONST.MSG.FIELD.NAME_MAPPING[fieldClass];
 
     if (fieldName) {
-      fields[fieldName] = getFieldValue(ds, msgData, documentProperty, fieldType);
+      if (fieldName === "body") {
+        if (typeof getFieldValue(ds, msgData, documentProperty, fieldType) === "string")
+          fields[fieldName] = getFieldValue(ds, msgData, documentProperty, fieldType);
+      } else {
+        fields[fieldName] = getFieldValue(ds, msgData, documentProperty, fieldType);        
+      }
     }
     if (fieldClass == CONST.MSG.FIELD.CLASS_MAPPING.ATTACHMENT_DATA) {
 
