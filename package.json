@@ -1,19 +1,19 @@
 {
-  "_from": "wl-msg-reader",
+  "_from": "wl-msg-reader@^0.2.0",
   "_id": "wl-msg-reader@0.2.0",
   "_inBundle": false,
   "_integrity": "sha512-2pfSLMzKhHc8iQHfMOxQjaxYg7gvrUl1hLduAgV7ASrwOFI05tIO6YwrREKSNUfDN+2ufyQm0ke/sxwbWsGGNA==",
   "_location": "/wl-msg-reader",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "wl-msg-reader",
+    "raw": "wl-msg-reader@^0.2.0",
     "name": "wl-msg-reader",
     "escapedName": "wl-msg-reader",
-    "rawSpec": "",
+    "rawSpec": "^0.2.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^0.2.0"
   },
   "_requiredBy": [
     "#USER",
@@ -21,7 +21,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/wl-msg-reader/-/wl-msg-reader-0.2.0.tgz",
   "_shasum": "31c18c10296b825c48b4d1d5628d651e3fe469c5",
-  "_spec": "wl-msg-reader",
+  "_spec": "wl-msg-reader@^0.2.0",
   "_where": "C:\\Users\\49011\\Documents\\業務締結プロセス\\a4a-clone\\A4A",
   "author": {
     "name": "Pascal Möhl",
