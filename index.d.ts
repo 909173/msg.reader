@@ -14,6 +14,9 @@ export interface MSGFileData {
     body: string;
     headers: string;
     attachments: MSGAttachment[];
+    to: string;
+    cc: string;
+    bcc: string;
 }
 
 export interface MSGErrorResult {
@@ -22,7 +25,8 @@ export interface MSGErrorResult {
 
 export interface MSGRecipient {
     name: string;
-    email: string;
+    email?: string;
+    sendType?: "to" | "cc" | "bcc";
 }
 
 export interface MSGAttachment {

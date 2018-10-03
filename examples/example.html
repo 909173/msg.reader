@@ -62,6 +62,10 @@
       <div class="field-label">Attachments</div>
       <div class="msg-attachment"></div>
     </div>
+    <div class='field-block'>
+      <div class='field-label'>To Address</div>
+      <div class='msg-to-address'></div>
+    </div>
   </div>
 </div>
 
@@ -140,6 +144,7 @@
             $('.msg-example .msg-body').html(
                 fileData.body ? fileData.body.substring(0, Math.min(500, fileData.body.length))
                 + (fileData.body.length > 500 ? '...' : '') : '');
+            // $('.msg-example .msg-to-address').html(fileData.To);
             $('.msg-example .msg-attachment').html(jQuery.map(fileData.attachments, function (attachment, i) {
               return attachment.fileName + ' [' + attachment.contentLength + 'bytes]' +
                   (attachment.pidContentId ? '; ID = ' + attachment.pidContentId : '');
