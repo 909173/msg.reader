@@ -39,6 +39,10 @@
       2. MSG info (<span class="msg-file-name"></span>)
     </div>
     <div class="field-block">
+      <div class="field-label">header info</div>
+      <div class="msg-header"></div>
+    </div>
+    <div class="field-block">
       <div class="field-label">From</div>
       <div class="msg-from"></div>
     </div>
@@ -130,6 +134,7 @@
           var msgReader = new MSGReader(buffer);
           var fileData = msgReader.getFileData();
           if (!fileData.error) {
+            console.log(fileData);
             $('.msg-example .msg-from').html(formatEmail({name: fileData.senderName, email: fileData.senderEmail}));
 
             $('.msg-example .msg-to').html(jQuery.map(fileData.recipients, function (recipient, i) {
@@ -144,8 +149,8 @@
               return attachment.fileName + ' [' + attachment.contentLength + 'bytes]' +
                   (attachment.pidContentId ? '; ID = ' + attachment.pidContentId : '');
             }).join('<br/>'));
+            $('.msg-example .msg-header').html(fileData.headers.replace(/ \n|\r\n|\r/, '<br>'));
             $('.msg-info').show();
-
             // Use msgReader.getAttachment to access attachment content ...
             // msgReader.getAttachment(0) or msgReader.getAttachment(fileData.attachments[0])
           } else {
